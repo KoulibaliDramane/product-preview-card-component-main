@@ -1,0 +1,129 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Cream);
+}
+
+.product-page {
+    display: flex;
+    width: 600px;
+    height: 450px;
+    border-radius: 10px;
+    background: var(--White);
+}
+
+#desktop-image {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+}
+
+#mobile-image{
+    display: none;
+}
+
+.description {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.product-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1; 
+    font-size: 30px;
+}
+
+.paragraph {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    line-height: 1.5; 
+    
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+#price1 {
+    color: var(--Dark-cyan);
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    justify-content: center;
+    gap: 10px;
+}
+
+.button:hover {
+    background-color: rgb(1, 50, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .product-page{
+        flex-direction: column;
+        width: min-content;
+        min-height: 600px;
+    }
+    #desktop-image {
+        display: none;
+    }
+    
+    #mobile-image{
+        display: inline;
+        width: 300px;
+    }
+
+    .images {
+        width: min-content;
+    }
+    .description {
+        height: 400px;
+    }
+}
